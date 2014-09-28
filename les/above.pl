@@ -20,3 +20,5 @@ sub middle # нахожу среднее арифметическое
     $middle = $sum /2;
     return $middle;
 }
+@banny = qw{ 1 3 5 6 7 8 9 };
+middle(@banny);
