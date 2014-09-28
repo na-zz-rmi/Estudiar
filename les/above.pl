@@ -3,9 +3,9 @@
 use strict;
 use 5.010;
 
-sub middle # нахожу среднее арифметическое
+sub middle
 {
-    $sum = 0;
+    my $sum = 0;
 
 
 
@@ -17,8 +17,30 @@ sub middle # нахожу среднее арифметическое
 
         $sum += $number;
     }
-    $middle = $sum /2;
+    my $middle = $sum / @_;
     return $middle;
 }
-@banny = qw{ 1 3 5 6 7 8 9 };
-middle(@banny);
+
+
+
+sub above_average
+{
+    my @numbers;
+    foreach my $number( @_ )
+    {
+        chomp;
+        my $mid = middle(@_);
+
+        if ($number > $mid) { push @numbers, $number}
+
+
+    }
+    return @numbers;
+
+}
+
+my @fred = above_average(1..10);
+print "\@fred is @fred\n";
+
+my @barney = above_average(100, 1..10);
+print "\@barney is @barney\n";
