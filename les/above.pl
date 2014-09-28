@@ -3,7 +3,7 @@
 use strict;
 use 5.010;
 
-sub middle
+sub middle # нахожу среднее арифметическое
 {
     $sum = 0;
 
