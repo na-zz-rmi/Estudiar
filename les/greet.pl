@@ -6,7 +6,7 @@ use 5.010;
 sub greet
 {      
        state @greeting;
-       foreach my $text( @greeting )
+       foreach my $text
        {
 
 
