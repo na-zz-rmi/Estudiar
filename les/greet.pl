@@ -4,28 +4,22 @@ use strict;
 use 5.010;
 
 sub greet
-{      
-       state @greeting;
-       foreach my $text
-       {
-
-
-
-
-
-            if (@greeting <= 1 )
+{
+            state @greeting;
+            say @_;
+            if (@greeting <= 1)
             {
-               say  "Hi $text! You are the first one here!";
-               push @greeting, $text;
+               say  "Hi @_! You are the first one here!";
+               push @greeting, @_;
 
             }
             else
             {
-                say "Hi $text! $greeting[$#greeting] is also here!";
-                push @greeting, $text;
-
+                say "Hi @_! $greeting[$#greeting] is also here!";
+                push @greeting, @_;
+                say @greeting;
             }
-    }
+
 }
 
 greet("fedor");
