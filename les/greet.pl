@@ -4,8 +4,9 @@ use strict;
 use 5.010;
 
 sub greet
-{      state @greeting;
-       foreach my $text( @_ )
+{      
+       state @greeting;
+       foreach my $text( @greeting )
        {
 
 
