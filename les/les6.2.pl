@@ -4,8 +4,9 @@ use 5.010;
 use strict;
 
 my @words = <STDIN>;
+my %ed;
 
-foreach my $word(@wrds)
+foreach my $word(@words)
 {
     chomp $word;
     $ed{$word} += 1;
