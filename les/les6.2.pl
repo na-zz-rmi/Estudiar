@@ -1,11 +1,9 @@
 #!/usr/bin/perl -w
 
-
-
-
 use 5.010;
+use strict;
 
-my @wrds = <STDIN>;
+my @words = <STDIN>;
 
 foreach my $word(@wrds)
 {
@@ -14,9 +12,9 @@ foreach my $word(@wrds)
 }
 
 
-foreach $word(sort keys %ed)
+foreach my $word(sort keys %ed)
 {
- say "$word $ed{$word}";
+    say "$word $ed{$word}";
 }    
 __END__
 =pod
